@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fog of Explore - Campus Adventure</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏫 Fog of Explore</h1>
+            <div class="score-board">
+                <span class="points">Points: <span id="userPoints">0</span></span>
+                <span class="level">Level: <span id="userLevel">1</span></span>
+            </div>
+        </header>
+
+        <main>
+            <div class="game-area">
+                <div class="status-panel">
+                    <div class="location-info">
+                        <h3>📍 Current Location</h3>
+                        <p id="currentLocation">Getting location...</p>
+                        <p class="coordinates" id="coordinates">Lat: --, Lon: --</p>
+                    </div>
+                    
+                    <div class="action-button">
+                        <button id="enableLocation" class="btn-primary">Enable Location</button>
+                        <button id="refreshLocation" class="btn-secondary" style="display: none;">Refresh Location</button>
+                    </div>
+                </div>
+
+                <div class="discoveries">
+                    <h3>🎯 Nearby Locations</h3>
+                    <div id="nearbyLocations" class="location-grid">
+                        <p class="placeholder">Enable location to discover nearby places!</p>
+                    </div>
+                </div>
+
+                <div class="visited-locations">
+                    <h3>✅ Visited Locations</h3>
+                    <div id="visitedLocations" class="visited-grid">
+                        <p class="placeholder">No locations visited yet. Start exploring!</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="stat-value" id="totalVisited">0</span>
+                    <span class="stat-label">Visited</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value" id="totalLocations">0</span>
+                    <span class="stat-label">Total Locations</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value" id="accuracy">--</span>
+                    <span class="stat-label">GPS Accuracy (m)</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="locations.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
